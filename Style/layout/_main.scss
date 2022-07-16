@@ -9,7 +9,6 @@ main {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  min-width: 1375px;
 
   /*card size and grid 2 columns*/
   .card {
@@ -21,6 +20,13 @@ main {
     background: $Lightgrayishblue;
     border-radius: 22px;
 
+    /*Media =>set card size*/
+    @media screen and (max-width: 990px) {
+      display: block;
+      width: 328px;
+      height: 535px;
+    }
+    /*set background img*/
     .img-bg {
       height: 509px;
       max-width: 920px;
@@ -30,8 +36,13 @@ main {
           bottom 80px left -80px no-repeat,
         url(..//..//images/bg-pattern-desktop.svg) bottom -150px left -570px
           no-repeat;
-    }
 
+      /*Media =>delete images*/
+      @media screen and (max-width: 990px) {
+        display: none;
+      }
+    }
+    /*add internet img*/
     .img-internet {
       position: absolute;
       background: url(..//../images/illustration-box-desktop.svg) no-repeat;
@@ -39,25 +50,71 @@ main {
       height: 100%;
       top: 40%;
       left: -10%;
-    }
+      transition: 0.4s ease-in;
 
+      /*Media =>delete images*/
+      @media screen and (max-width: 990px) {
+        display: none;
+      }
+    }
+    /*setting for mobile image*/
+    .img-mobile {
+      position: absolute;
+      display: none;
+      /*setting for mobile image*/
+      @media screen and (max-width: 990px) {
+        display: block;
+        width: 328px;
+        height: 1000px;
+        background: url(..//../images/illustration-woman-online-mobile.svg) top
+          0px left 0px no-repeat;
+        z-index: 99;
+        top: -150px;
+        left: 60px;
+        zoom: 72%;
+      }
+    } /*setting for mobile image*/
+    .img-mobile2 {
+      position: absolute;
+      display: none;
+      /*setting for mobile image*/
+      @media screen and (max-width: 990px) {
+        display: block;
+        width: 328px;
+        height: 1000px;
+        background: url(..//../images/bg-pattern-mobile.svg) top 0px left 40px
+          no-repeat;
+        top: 0px;
+        left: 0px;
+      }
+    }
+    /*Faq part*/
     .card-right {
       display: flex;
       flex-direction: column;
       justify-content: center;
       padding: 0 90px 0 70px;
 
+      @media screen and (max-width: 990px) {
+        padding: 25px;
+      }
+
       h1 {
         text-transform: uppercase;
         font-weight: 700;
         font-size: 2rem;
         margin-bottom: 20px;
-      }
 
+        @media screen and (max-width: 990px) {
+          text-align: center;
+          margin-top: 100px;
+        }
+      }
+      /*Faq part*/
       .faq {
         border-bottom: 1px solid $Darkgrayishblue;
         cursor: pointer;
-        z-index: 1;
+        z-index: 99;
 
         .question {
           display: grid;
@@ -69,6 +126,10 @@ main {
           h3 {
             font-weight: 400;
             font-size: 1rem;
+
+            @media screen and (max-width: 990px) {
+              font-size: 0.9rem;
+            }
 
             &:hover {
               color: $Softred;
@@ -91,7 +152,7 @@ main {
         }
       }
 
-      /* Active element*/
+      /* active element to interact with js*/
 
       .active .question h3 {
         font-weight: 800;

@@ -1,4 +1,5 @@
 const questions = document.querySelectorAll(".question");
+const imginternet = document.querySelector(".img-internet");
 
 questions.forEach((element) => {
   element.addEventListener("click", () => {

@@ -44,7 +44,6 @@ main {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  min-width: 1375px;
   /*card size and grid 2 columns*/
 }
 main .card {
@@ -55,6 +54,19 @@ main .card {
   grid-template-columns: 45% 55%;
   background: hsl(240deg, 5%, 91%);
   border-radius: 22px;
+  /*Media =>set card size*/
+  /*set background img*/
+  /*add internet img*/
+  /*setting for mobile image*/
+  /*setting for mobile image*/
+  /*Faq part*/
+}
+@media screen and (max-width: 990px) {
+  main .card {
+    display: block;
+    width: 328px;
+    height: 535px;
+  }
 }
 main .card .img-bg {
   height: 509px;
@@ -62,6 +74,12 @@ main .card .img-bg {
   display: flex;
   justify-content: flex-end;
   background: url(..//../images/illustration-woman-online-desktop.svg) bottom 80px left -80px no-repeat, url(..//..//images/bg-pattern-desktop.svg) bottom -150px left -570px no-repeat;
+  /*Media =>delete images*/
+}
+@media screen and (max-width: 990px) {
+  main .card .img-bg {
+    display: none;
+  }
 }
 main .card .img-internet {
   position: absolute;
@@ -70,13 +88,58 @@ main .card .img-internet {
   height: 100%;
   top: 40%;
   left: -10%;
+  transition: 0.4s ease-in;
+  /*Media =>delete images*/
+}
+@media screen and (max-width: 990px) {
+  main .card .img-internet {
+    display: none;
+  }
+}
+main .card .img-mobile {
+  position: absolute;
+  display: none;
+  /*setting for mobile image*/
+}
+@media screen and (max-width: 990px) {
+  main .card .img-mobile {
+    display: block;
+    width: 328px;
+    height: 1000px;
+    background: url(..//../images/illustration-woman-online-mobile.svg) top 0px left 0px no-repeat;
+    z-index: 99;
+    top: -150px;
+    left: 60px;
+    zoom: 72%;
+  }
+}
+main .card .img-mobile2 {
+  position: absolute;
+  display: none;
+  /*setting for mobile image*/
+}
+@media screen and (max-width: 990px) {
+  main .card .img-mobile2 {
+    display: block;
+    width: 328px;
+    height: 1000px;
+    background: url(..//../images/bg-pattern-mobile.svg) top 0px left 40px no-repeat;
+    top: 0px;
+    left: 0px;
+  }
 }
 main .card .card-right {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 90px 0 70px;
-  /* Active element*/
+  /*Faq part*/
+  /* active element to interact with js*/
+}
+@media screen and (max-width: 990px) {
+  main .card .card-right {
+    padding: 25px;
+  }
 }
 main .card .card-right h1 {
   text-transform: uppercase;
@@ -84,10 +147,16 @@ main .card .card-right h1 {
   font-size: 2rem;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 990px) {
+  main .card .card-right h1 {
+    text-align: center;
+    margin-top: 100px;
+  }
+}
 main .card .card-right .faq {
   border-bottom: 1px solid hsl(240deg, 6%, 50%);
   cursor: pointer;
-  z-index: 1;
+  z-index: 99;
 }
 main .card .card-right .faq .question {
   display: grid;
@@ -99,6 +168,11 @@ main .card .card-right .faq .question {
 main .card .card-right .faq .question h3 {
   font-weight: 400;
   font-size: 1rem;
+}
+@media screen and (max-width: 990px) {
+  main .card .card-right .faq .question h3 {
+    font-size: 0.9rem;
+  }
 }
 main .card .card-right .faq .question h3:hover {
   color: hsl(14deg, 88%, 65%);
