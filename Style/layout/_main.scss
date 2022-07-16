@@ -1,0 +1,123 @@
+/**********************************************************************/
+
+/*Main*/
+
+/**********************************************************************/
+/*flex on main for center elements in page*/
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 1375px;
+
+  /*card size and grid 2 columns*/
+  .card {
+    position: relative;
+    width: 920px;
+    height: 509px;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    background: $Lightgrayishblue;
+    border-radius: 22px;
+
+    .img-bg {
+      height: 509px;
+      max-width: 920px;
+      display: flex;
+      justify-content: flex-end;
+      background: url(..//../images/illustration-woman-online-desktop.svg)
+          bottom 80px left -80px no-repeat,
+        url(..//..//images/bg-pattern-desktop.svg) bottom -150px left -570px
+          no-repeat;
+    }
+
+    .img-internet {
+      position: absolute;
+      background: url(..//../images/illustration-box-desktop.svg) no-repeat;
+      width: 100%;
+      height: 100%;
+      top: 40%;
+      left: -10%;
+    }
+
+    .card-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 90px 0 70px;
+
+      h1 {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .faq {
+        border-bottom: 1px solid $Darkgrayishblue;
+        cursor: pointer;
+        z-index: 1;
+
+        .question {
+          display: grid;
+          grid-template-columns: 94% 6%;
+          height: 50px;
+          align-items: center;
+          transition: 0.4s ease-in;
+
+          h3 {
+            font-weight: 400;
+            font-size: 1rem;
+
+            &:hover {
+              color: $Softred;
+              font-weight: bold;
+            }
+          }
+
+          .btn {
+            height: 8px;
+            width: 10px;
+            margin-top: 4px;
+            transition: 0.4s ease-in;
+          }
+        }
+        .answer {
+          max-height: 0;
+          display: none;
+          font-size: 0.85rem;
+          color: $Darkgrayishblue;
+        }
+      }
+
+      /* Active element*/
+
+      .active .question h3 {
+        font-weight: 800;
+      }
+
+      .active .answer {
+        display: block;
+        max-height: 100px;
+        margin-bottom: 18px;
+        animation: fade 0.5s ease-in;
+      }
+
+      .active img {
+        transform: rotate(180deg);
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0;
+          transform: translateY(-5px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+    }
+  }
+}

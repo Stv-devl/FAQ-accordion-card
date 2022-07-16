@@ -1,0 +1,51 @@
+/**********************************************************************/
+
+/*setting*/
+
+/**********************************************************************/
+
+/*setting fonts*/
+/*Weights: 400, 700*/
+@font-face {
+  font-family: "kumbh Sans";
+  src: url(../font/KumbhSans-VariableFont_wght.ttf);
+}
+
+/*setting colors*/
+$Backgroundgradient: hsl(273, 75%, 66%) to hsl(240, 73%, 65%);
+$Verydarkdesaturatedblue: hsl(238, 29%, 16%);
+$Softred: hsl(14, 88%, 65%);
+$Verydarkgrayishblue: hsl(237, 12%, 33%);
+$Darkgrayishblue: hsl(240, 6%, 50%);
+$Lightgrayishblue: hsl(240, 5%, 91%);
+
+/*setting page*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  margin-block: 0;
+  outline: none;
+}
+
+/*setting body*/
+body {
+  min-height: 100vh;
+  font-family: kumbh Sans;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+  color: $Verydarkgrayishblue;
+  background: linear-gradient(
+    to bottom,
+    hsl(273, 75%, 66%),
+    hsl(240, 73%, 65%)
+  );
+}
+
+/*setting link color (footer)*/
+a,
+a:visited {
+  color: $Verydarkgrayishblue;
+}
