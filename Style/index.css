@@ -52,7 +52,7 @@ main .card {
   height: 509px;
   display: grid;
   grid-template-columns: 45% 55%;
-  background: hsl(240deg, 5%, 91%);
+  background: rgb(250, 250, 250);
   border-radius: 22px;
   /*Media =>set card size*/
   /*set background img*/
@@ -165,16 +165,16 @@ main .card .card-right .faq .question {
   align-items: center;
   transition: 0.4s ease-in;
 }
-main .card .card-right .faq .question h3 {
+main .card .card-right .faq .question h2 {
   font-weight: 400;
   font-size: 1rem;
 }
 @media screen and (max-width: 990px) {
-  main .card .card-right .faq .question h3 {
+  main .card .card-right .faq .question h2 {
     font-size: 0.9rem;
   }
 }
-main .card .card-right .faq .question h3:hover {
+main .card .card-right .faq .question h2:hover {
   color: hsl(14deg, 88%, 65%);
   font-weight: bold;
 }
@@ -190,7 +190,7 @@ main .card .card-right .faq .answer {
   font-size: 0.85rem;
   color: hsl(240deg, 6%, 50%);
 }
-main .card .card-right .active .question h3 {
+main .card .card-right .active .question h2 {
   font-weight: 800;
 }
 main .card .card-right .active .answer {
